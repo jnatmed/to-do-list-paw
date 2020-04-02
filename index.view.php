@@ -8,6 +8,11 @@
         <h1><?= $nombre_lista ?></h1>
     </header>
     <main>
+        <section id="mensajes">
+            <?php foreach ($mensajes_usuario as $mensaje) : ?>
+                <p><?= $mensaje ?></p>
+            <?php endforeach ?>
+        </section>
         <section id="pendientes">
             <h1>Tareas Pendientes</h1>
             <ul>
