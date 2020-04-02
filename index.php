@@ -1,17 +1,18 @@
 <?php
 
-$dueño  =  "Juan" ;
-$nombre_lista  =  "Lista de Tareas: $dueño " ;
+include 'models/ToDoListModel.php';
+include 'models/TaskModel.php';
 
-$tareas_pendientes  =  [
-    "Carniceria: Asado" ,
-    "Verduleria: Lechuga, Tomate, Huevo" ,
-    "Supermercado: Desodorante, Pagar Impuestos" ,
-];
+use \App\models\ToDoList;
 
-$tareas_finalizadas  =  [
-    "Farmacia: Remedios" ,
-];
+$dueño = "Juan";
+$nombre_lista = "Lista de Tareas: $dueño";
 
-include  "index.view.php" ;
+$todo_list = new ToDoList;
+$todo_list->create_task("Carniceria: Asado");
+$todo_list->create_task("Verduleria: Lechuga, Tomate, Huevo");
+$todo_list->create_task("Supermercado: Desodorante, Pagar Impuestos");
+$todo_list->create_task("Farmacia: Remedios", true);
+
+include "index.view.php";
 ?>
