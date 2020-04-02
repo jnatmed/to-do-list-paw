@@ -7,7 +7,7 @@ use \App\models\ToDoList;
 
 $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-$dueño = "Tomas";
+$dueño = "Juan";
 $nombre_lista = "Lista de Tareas: $dueño";
 $todo_list = new ToDoList;
 $todo_list->create_task("Carniceria: Asado");
