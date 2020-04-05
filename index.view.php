@@ -6,6 +6,13 @@
 <body>
     <header>
         <h1><?= $nombre_lista ?></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/new_task">Crear Nueva Tarea</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="mensajes">
