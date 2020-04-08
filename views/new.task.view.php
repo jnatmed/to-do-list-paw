@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $dueño ?> To-Do List</title>
+    <title><?= $this->view_data['dueño'] ?> To-Do List</title>
 </head>
 <body>
     <header>
-        <h1><?= $nombre_lista ?></h1>
+        <h1><?= $this->view_data['nombre_lista'] ?></h1>
     </header>
     <main>
         <form action="/save_task" method="POST">

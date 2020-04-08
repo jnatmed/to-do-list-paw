@@ -2,15 +2,13 @@
 
 namespace App\controllers;
 
+use App\core\Controller;
 use App\models\ToDoList;
 
-class ToDoListController
+class ToDoListController extends Controller
 {
     public function index()
     {
-        $dueño = "Juan";
-        $nombre_lista = "Lista de Tareas: $dueño";
-        $mensajes_usuario = [];
 
         $todo_list = new ToDoList;
         $todo_list->create_task("Carniceria: Asado");
@@ -21,8 +19,6 @@ class ToDoListController
         $descripcion = $_POST['descripcion'];
         $finalizada = $_POST['finalizada'] == "si";
         $task = $todo_list->create_task($descripcion, $finalizada);
-        $mensajes_usuario[] = "La tarea '{$task->descripcion}' se creo con exito";
-        $mensajes_usuario[] = "Si esto tuviera persistencia, aca hay que hacer el save";
         include "index.view.php";        
     }
 }
